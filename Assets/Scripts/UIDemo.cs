@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIDemo : MonoBehaviour
 {
-    SpriteRenderer sr;
+    SpriteRenderer sr; //the red square sprite
     public Image image; //the image on the UI canvas
     public int howManyClicks = 0;
     public TextMeshProUGUI score;
