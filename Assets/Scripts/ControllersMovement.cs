@@ -32,7 +32,11 @@ public class ControllersMovement : MonoBehaviour
             newPos.x += speed * Time.deltaTime;
             transform.position = newPos;
         }
+               
+    }
 
-        
+    public void ChangeTheSpeed()
+    {
+        speed += 1;
     }
 }
