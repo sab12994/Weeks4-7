@@ -1,11 +1,13 @@
 using TMPro;
 using UnityEngine;
 
+
 public class TimerForAssignment : MonoBehaviour
 {
     public float time = 100;
     public float timeEnd = 0;
     public TextMeshProUGUI timerVisuals;
+    public GameObject gameOver;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,9 +22,16 @@ public class TimerForAssignment : MonoBehaviour
 
         if(time < timeEnd) //if the time counts to 0 it starts from the beginning
         {
-            time = 100;
+            gameOver.SetActive(true);
+            
+        }
+        else
+        {
+            gameOver.SetActive(false);
         }
 
-        timerVisuals.text = time.ToString(); //so the text will show the amount of time left
+
+
+            timerVisuals.text = time.ToString(); //so the text will show the amount of time left
     }
 }
