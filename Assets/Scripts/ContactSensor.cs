@@ -6,7 +6,7 @@ public class ContactSensor : MonoBehaviour
     public SpriteRenderer hazard;
     public bool isInHazard = false;
     public UnityEvent OnEnterSensor;
-    //public UnityEvent OnExitSensor;
+    public UnityEvent OnExitSensor;
     public UnityEvent<float> OnRandomNumber;
 
     void Start()
@@ -37,7 +37,7 @@ public class ContactSensor : MonoBehaviour
             {
                 //exited the hazard
                 //do something
-                //OnExitSensor.Invoke();
+                OnExitSensor.Invoke();
                 isInHazard = false;
                 OnRandomNumber.Invoke(Random.Range(0, 10));
             }
